@@ -8,10 +8,10 @@
  * Configuration for the loading screen.
  */
 const config = {
-    title: `Family Guy Online`, // Title of your server.
+    title: `Family Guy DarkRP`, // Title of your server.
 
     test: {
-        serverURL: `alru.xyz`, // The IP to your server.
+        serverURL: `venus.alru.xyz`, // The IP to your server.
         mapName: `rp_simplytown_v2`, // The name of the map on your server.
         maxPlayers: 128 // Number of player slots on your server.
     },
