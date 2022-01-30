@@ -1,6 +1,6 @@
 /**
  * Garry's Mod Loading Screen
- * @author Zeropoint
+ * @author DamienVesper
  * @license AGPL-3.0
  */
 
@@ -12,7 +12,7 @@ const config = {
 
     test: {
         serverURL: `alru.xyz`, // The IP to your server.
-        mapName: `Map Name`, // The name of the map on your server.
+        mapName: `rp_simplytown_v2`, // The name of the map on your server.
         maxPlayers: 128 // Number of player slots on your server.
     },
 
@@ -21,14 +21,15 @@ const config = {
     enableAnnouncements: true, // Enable announcements?
     announceMessages: [
         `Enjoy your stay!`,
-        `Join our Discord at discord.alru.cc!`,
-        `Gamemode Made By zeropoint#9798`
+        `Join our Discord at discord.alru.xyz!`,
+        `Created by DamienVesper#5225`
     ],
     announcementLength: 3e3, // Duration of an announcement, in milliseconds.
     backgroundImage: ``, // Optional background image.
     enableDebug: false // Enable debug messages?
 };
 
+// State variables.
 let isGmod = false;
 let isTest = false;
 let totalFiles = 50;
@@ -66,7 +67,6 @@ const announce = (message, isPermanent) => {
 
 /**
  * Set game details.
- * @author Zeropoint
  * @param {string?} serverName The name of the server.
  * @param {string} serverURL The IP of the server.
  * @param {string} mapName The name of the map.
@@ -217,10 +217,10 @@ $(document).ready(() => {
         }
     }
 
-    // If it isn't loaded by Gmod load manually.
+    // If it isn't loaded by Garry's Mod load manually.
     setTimeout(() => {
         if (!isGmod) {
-            debug(`Not running Gmod!`);
+            debug(`Not running Garry's Mod!`);
             isTest = true;
 
             loadAll();
@@ -239,6 +239,7 @@ $(document).ready(() => {
                     DownloadingFile(`Filename ${needed}`);
                 }
             }, 500);
+
             SetStatusChanged(`Testing...`);
         }
     }, 1e3);
